@@ -1,0 +1,158 @@
+$mainColor: #b80201;
+$borderColor: #333;
+
+#categoryblocks-module {
+  margin-bottom: 50px;
+
+  h2 {
+    text-align: center;
+    font-size: 34px;
+    margin: 50px auto;
+  }
+
+  .btn-more {
+    background-color: $mainColor;
+    color: white;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    margin: 10px auto 25px auto;
+
+    &:hover {
+      background-color: white;
+      color: $mainColor;
+      border: 1px solid $mainColor;
+    }
+  }
+
+  .categoryblocks-container {
+    padding: 0 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 15px 50px;
+    grid-template-areas:
+            ". .";
+  }
+
+  .categoryblock {
+    h3 {
+      text-align: left;
+      padding-left: 30px;
+      margin-bottom: 30px;
+      margin-top: 20px;
+      font-size: 24px;
+    }
+    border-radius: 5px;
+    border: 1px solid $mainColor;
+    background: white;
+    position: relative;
+
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 50px;
+      height: 2px;
+      background: $mainColor;
+      top: 50px;
+      left: 30px;
+    }
+  }
+
+  .categoryblock-inner {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    align-content: stretch;
+    width: 100%;
+    overflow-y: auto;
+    height: 333px;
+  }
+
+  .productbox {
+    width: 80%;
+    border-radius: 5px;
+    border: 1px solid $mainColor;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: white;
+
+    img {
+      max-width: 64px;
+    }
+
+    .special-flex-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+
+      a {
+        font-size: 14px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: space-between;
+        padding: 0 15px;
+        margin-bottom: 0;
+      }
+
+      .qty-changers {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: space-between;
+
+        button {
+          margin-left: 10px;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          background-color: $mainColor;
+          outline: none;
+          border: none;
+          color: white;
+          transition: all 0.5s ease;
+
+          &:hover {
+            background-color: white;
+            color: $mainColor;
+            border: 1px solid $mainColor;
+
+            i {
+              color: $mainColor;
+              margin-left: -4px;
+            }
+          }
+
+          i {
+            margin-left: -3px;
+            font-size: 15px;
+            color: white;
+            margin-top: -3px;
+          }
+        }
+      }
+    }
+
+    .qty-changers {
+      .qty-input {
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        padding: 5px;
+        border-radius: 50%;
+        border: 1px solid $borderColor;
+        outline: none;
+      }
+    }
+  }
+}
