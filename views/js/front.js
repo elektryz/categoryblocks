@@ -14,12 +14,3 @@ function updateProductQuantityCustom(selector, number) {
     let sele = selector.find($('input[name ="qty"]'));
     sele.val(number);
 }
-
-if (typeof prestashop !== 'undefined') {
-    prestashop.on(
-        'updateCart',
-        function (event) {
-
-        }
-    );
-}
